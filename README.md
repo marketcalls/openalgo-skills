@@ -14,19 +14,62 @@ with Claude Code, Codex, and any agent that loads `SKILL.md`.
 
 ---
 
-## Quick install
+## Quick Install
+
+Install the skill into your project using [npx skills](https://github.com/vercel-labs/skills). The CLI auto-detects your AI coding agent and installs skills to the correct directory.
 
 ```bash
-git clone https://github.com/marketcalls/openalgo-skills.git
-cd openalgo-skills
-cp .env.sample .env                    # fill in OPENALGO_API_KEY + host/ws URLs
+# GitHub shorthand
+npx skills add marketcalls/openalgo-skills
+
+# Full GitHub URL
+npx skills add https://github.com/marketcalls/openalgo-skills
+```
+
+Install the bundled skill explicitly:
+
+```bash
+npx skills add marketcalls/openalgo-skills -s openalgo
+```
+
+List available skills before installing:
+
+```bash
+npx skills add marketcalls/openalgo-skills -l
+```
+
+Install globally (available across all projects):
+
+```bash
+npx skills add marketcalls/openalgo-skills -g
+```
+
+After installation, copy `.env.sample` to `.env` at your project root and fill in `OPENALGO_API_KEY`, `OPENALGO_HOST`, `OPENALGO_WS_URL`, and (optionally) `HISTORIFY_DUCKDB_PATH`. Then install the Python dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
-When using inside Claude Code or any SKILL.md-aware agent, the skill at
-`skills/openalgo/SKILL.md` auto-loads. Trigger phrases include
-"OpenAlgo", "place an order", "scan NIFTY 50", "stream NIFTY depth",
-"backtest a strategy on Historify data", "build a limit-order chaser".
+The skill auto-loads on triggers like "OpenAlgo", "place an order", "scan NIFTY 50", "stream NIFTY depth", "backtest a strategy on Historify data", "build a limit-order chaser".
+
+### Supported AI Coding Agents
+
+Skills are installed via [skills.sh](https://github.com/vercel-labs/skills) which supports 40+ agents. Each agent reads skills from its own directory:
+
+| Agent | Skills Directory |
+|-------|-----------------|
+| Claude Code | `.claude/skills/` |
+| Cursor | `.agents/skills/` |
+| Codex | `.agents/skills/` |
+| OpenCode | `.agents/skills/` |
+| Cline | `.agents/skills/` |
+| Windsurf | `.agents/skills/` |
+| GitHub Copilot | `.agents/skills/` |
+| Gemini CLI | `.agents/skills/` |
+| Roo Code | `.agents/skills/` |
+| + 30 more | Auto-detected by `npx skills` |
+
+The `npx skills add` command detects which agents you have installed and places the skill files in the correct paths automatically.
 
 ---
 
