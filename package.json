@@ -1,0 +1,45 @@
+{
+  "name": "@marketcalls/openalgo-skills",
+  "version": "0.1.0",
+  "description": "Agent skills for OpenAlgo — comprehensive coverage of order execution, custom limit-order algos, scanners, visualization, backtesting, charting, and real-time WebSocket streaming for NSE/BSE/MCX markets via the OpenAlgo Python SDK.",
+  "keywords": [
+    "openalgo",
+    "agent-skills",
+    "claude-code",
+    "trading",
+    "nse",
+    "bse",
+    "mcx",
+    "options",
+    "futures",
+    "indian-markets",
+    "algo-trading",
+    "vectorbt",
+    "duckdb",
+    "limit-order-chasing"
+  ],
+  "homepage": "https://github.com/marketcalls/openalgo-skills",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marketcalls/openalgo-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marketcalls/openalgo-skills/issues"
+  },
+  "license": "MIT",
+  "author": "Rajandran R <rajandran@marketcalls.in>",
+  "skills": [
+    {
+      "name": "openalgo",
+      "path": "skills/openalgo",
+      "entry": "SKILL.md"
+    }
+  ],
+  "files": [
+    "skills/",
+    "README.md",
+    ".env.sample",
+    "requirements.txt",
+    "LICENSE"
+  ]
+}

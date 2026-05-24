@@ -1,0 +1,32 @@
+# Core OpenAlgo SDK (trading API + websocket client)
+openalgo>=1.0.49
+# JIT-accelerated openalgo.ta indicators (Supertrend, Donchian, Ichimoku, HMA, KAMA, ALMA, ZLEMA, VWMA, exrem, crossover, crossunder, flip)
+openalgo[indicators]>=1.0.49
+
+# Environment
+python-dotenv>=1.0.0
+
+# Data
+pandas>=2.0.0
+numpy>=1.24.0
+duckdb>=1.0.0           # direct Historify access
+pyarrow>=14.0.0         # parquet, pandas backend
+
+# Technical indicators — use TA-Lib for the standard set (EMA, SMA, RSI, MACD, ATR, BBANDS, ADX, STDDEV, MOM)
+TA-Lib>=0.4.28
+
+# Backtesting (glue with vectorbt-backtesting-skills)
+vectorbt>=0.26.0
+
+# Charting / visualization
+plotly>=5.18.0
+matplotlib>=3.8.0       # heatmaps, seasonality
+seaborn>=0.13.0
+
+# Real-time scheduling (intraday loops, straddle scheduler)
+APScheduler>=3.10.0
+pytz>=2024.1
+
+# HTTP (used by some legacy examples; openalgo SDK uses httpx internally)
+httpx>=0.27.0
+requests>=2.31.0

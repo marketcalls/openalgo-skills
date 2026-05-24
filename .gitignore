@@ -1,0 +1,34 @@
+# Secrets
+.env
+*.env
+!.env.sample
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Generated workspace (user output goes here)
+openalgo_workspace/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Data
+*.duckdb
+*.duckdb.wal
+*.sqlite
+*.db
+*.csv
+!skills/openalgo/assets/*.csv
+*.parquet
